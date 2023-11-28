@@ -1,10 +1,40 @@
+"use client";
+import Image from "next/image";
+import BackgroundImage from "../../public/images/background.jpg";
+import "../app/globals.css";
+import { FaGithub, FaFacebook } from "react-icons/fa";
 export default function Contact() {
+  const contacts = [
+    {
+      name: "Facebook",
+      icon: <FaFacebook className="mr-2" />,
+      link: "https://web.facebook.com/patipantarat/",
+    },
+    {
+      name: "Github",
+      icon: <FaGithub className="mr-2" />,
+      link: "https://github.com/PatipolPantarat/",
+    },
+  ];
+
   return (
-    <div name="contact" className="w-full h-screen text-black">
+    <div id="contact" className="w-full h-screen text-black bg-zinc-50">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col items-center justify-center w-full h-full">
         <h1 className="text-4xl font-bold mb-5">Contact</h1>
-        <div className="bg-yellow-400 w-1/6 h-2 mb-2 rounded"></div>
-        <div className="w-3/4 shadow-xl p-3 rounded-3xl">
+        <div className="bg-yellow-400 w-1/6 h-2 rounded mb-5"></div>
+        <div className="text-center mt-2 mb-10 flex">
+          {contacts.map(({ name, icon, link }) => (
+            <a
+              key={name}
+              className="bg-yellow-400 text-black px-5 py-2 rounded-md hover:scale-110 duration-300 flex items-center text-xl font-bold me-5"
+              onClick={() => window.open(link, "_blank")}
+            >
+              {icon}
+              {name}
+            </a>
+          ))}
+        </div>
+        <div className="w-3/4 shadow-xl p-3 rounded-3xl bg-white">
           <form
             className="w-full p-10"
             action={"https://getform.io/f/994792d6-0143-43e5-bf31-d36b3e75d3cf"}

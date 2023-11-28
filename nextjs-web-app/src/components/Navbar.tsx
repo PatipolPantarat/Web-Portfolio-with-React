@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../app/globals.css";
 import { FaBars, FaTimes, FaHome, FaInfoCircle, FaCode } from "react-icons/fa";
 import Image from "next/image";
-import ProfileImage from "../../public/facebook_profile.jpg";
+import ProfileImage from "../../public/images/facebook_profile.jpg";
 import { Link } from "react-scroll";
 
 export default function CustomNavbar(props: any) {
@@ -47,7 +47,7 @@ export default function CustomNavbar(props: any) {
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="font-bold text-lg capitalize py-2 px-5 mx-2 duration-200 hover:scale-105 hover:text-yellow-400 cursor-pointer"
+              className="font-bold text-lg capitalize py-2 px-5 mx-2 duration-200 hover:scale-105 hover:text-yellow-400 cursor-pointer "
             >
               <Link to={link} smooth duration={500}>
                 {link}
