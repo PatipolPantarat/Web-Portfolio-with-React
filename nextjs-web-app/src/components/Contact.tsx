@@ -24,14 +24,14 @@ export default function Contact() {
         <div className="bg-yellow-400 w-1/6 h-2 rounded mb-5"></div>
         <div className="text-center mt-2 mb-10 flex">
           {contacts.map(({ name, icon, link }) => (
-            <a
+            <button
               key={name}
-              className="bg-yellow-400 text-black px-5 py-2 rounded-md hover:scale-110 duration-300 flex items-center text-xl font-bold me-5"
+              className="bg-yellow-400 text-black px-5 py-2 rounded-md hover:scale-110 duration-300 flex items-center text-xl font-bold me-5 cursor-pointer"
               onClick={() => window.open(link, "_blank")}
             >
               {icon}
               {name}
-            </a>
+            </button>
           ))}
         </div>
         <div className="w-3/4 shadow-xl p-3 rounded-3xl bg-white">
