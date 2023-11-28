@@ -3,8 +3,14 @@ import Image from "next/image";
 import BackgroundImage from "../../public/images/background.jpg";
 import "../app/globals.css";
 import { FaGithub, FaFacebook } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 export default function Contact() {
   const contacts = [
+    {
+      name: "Email",
+      icon: <IoIosMail className="mr-2 text-2xl" />,
+      link: "mailto:Patipol.Pantarat@gmail.com",
+    },
     {
       name: "Facebook",
       icon: <FaFacebook className="mr-2" />,
